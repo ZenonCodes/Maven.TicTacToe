@@ -32,6 +32,7 @@ public class Board {
 
 
     public Boolean diagonalWin(char c){
+        Character.toLowerCase(c);
         if(board[0][0].equals(c) && board[1][1].equals(c) && board[2][2].equals(c)){
             return true;
         } else if (board[0][2].equals(c) && board[1][1].equals(c) && board[2][0].equals(c)){
@@ -43,6 +44,7 @@ public class Board {
 
 
     public Boolean horWin(char c){
+        Character.toLowerCase(c);
         //Hor1
         if(board[0][0].equals(c) && board[0][1].equals(c) && board[0][2].equals(c)){
             return true;
@@ -58,9 +60,9 @@ public class Board {
     public Boolean vertWin(char c){
         Character.toLowerCase(c);
         //Vert1
-        if(board[0][1].equals(c) && board[1][0].equals(c) && board[2][0].equals(c)){
+        if(board[0][0].equals(c) && board[1][0].equals(c) && board[1][0].equals(c)){
             return true;
-        } else if (board[0][1].equals(c) && board[1][1].equals(c) && board[1][2].equals(c)){
+        } else if (board[0][1].equals(c) && board[1][1].equals(c) && board[2][1].equals(c)){
             return true;
         } else if (board[0][2].equals(c) && board[1][2].equals(c) && board[2][2].equals(c)){
             return true;

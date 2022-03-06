@@ -20,7 +20,7 @@ public class Board {
          * Horizontal Wins:
          * [0][0],[0][1],[0][2] or [1][0],[1][1],[1][2] or [2][0],[2][1],[2][2]
          * Vertical Wins:
-         * [0][1],[1][0],[2][0] or [0][1],[1][1],[2][1] or [0][2],[1][2],[2][2]
+         * [0][0],[1][0],[1][0] or [0][1],[1][1],[2][1] or [0][2],[1][2],[2][2]
          */
     }
 //    Character[][] y =
@@ -100,7 +100,7 @@ public class Board {
 
     public String getWinner() {
         if(isTie()){
-            return("It was a tie!");
+            return("");
         }
         if (isInFavorOfO()){
             return("O");

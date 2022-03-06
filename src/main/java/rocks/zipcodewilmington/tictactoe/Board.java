@@ -3,33 +3,35 @@ package rocks.zipcodewilmington.tictactoe;
 /**
  * @author leon on 6/22/18.
  */
+
+/**
+ * Brute Force:
+ * 3 x 3
+ * {[X,X,0]}
+ * {[O,O,O]}
+ * {[O,0,X]}
+ * X wins if X is in all the following positions
+ * Diagonal Wins:
+ * [0][0],[1][1],[2][2] or ,[0][2],[1][1],[2][0]
+ * Horizontal Wins:
+ * [0][0],[0][1],[0][2] or [1][0],[1][1],[1][2] or [2][0],[2][1],[2][2]
+ * Vertical Wins:
+ * [0][0],[1][0],[1][0] or [0][1],[1][1],[2][1] or [0][2],[1][2],[2][2]
+ * Test Matrix:
+ *
+ * Character[][] y =
+ *            {
+ *                    {'X', 'O', 'X'},
+ *                    {'X', 'O', 'O'},
+ *                    {'X', 'X', 'O'},
+ *            };
+ */
 public class Board {
     public static Character[][] board;
     public Board(Character[][] matrix) {
         this.board = matrix;
 
-
-        /**
-         * 3 x 3
-         * {[X,X,0]}
-         * {[O,O,O]}
-         * {[O,0,X]}
-         * X wins if X is in all the following positions
-         * Diagonal Wins:
-         * [0][0],[1][1],[2][2] or ,[0][2],[1][1],[2][0]
-         * Horizontal Wins:
-         * [0][0],[0][1],[0][2] or [1][0],[1][1],[1][2] or [2][0],[2][1],[2][2]
-         * Vertical Wins:
-         * [0][0],[1][0],[1][0] or [0][1],[1][1],[2][1] or [0][2],[1][2],[2][2]
-         */
     }
-//    Character[][] y =
-//            {
-//                    {'X', 'O', 'X'},
-//                    {'X', 'O', 'O'},
-//                    {'X', 'X', 'O'},
-//            };
-
 
     public Boolean diagonalWin(char c){
         Character.toLowerCase(c);
